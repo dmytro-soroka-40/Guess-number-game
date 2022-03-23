@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0 20px;
+
+  font-family: 'Consolas', monospace;
+  font-size: 1.3rem;
+
+  background-color: #012456;
+  color: #d9e311;
+}
+
+main {
+  padding: 0.5rem;
+}
+
+#output {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+#output .user {
+  font-weight: bold;
+
+  color: #d9e311;
+}
+
+#prompt {
+  display: flex;
+  align-items: center;
+
+  font-size: 1.5rem;
+}
+
+#prompt input {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  padding: 1rem 0.5rem;
+
+  font-size: inherit;
+  font-family: 'Consolas', monospace;
+
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #d9e311;
+}
+
+#prompt::before {
+  content: '> ';
+}
+
+.blink {
+  display: inline;
+
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  animation-duration: 1s;
+}
+
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
